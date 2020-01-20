@@ -89,9 +89,18 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </div>
     </div>
 
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download"></i> Download Resume
+    <button class="w3-button w3-light-grey w3-padding-large w3-section" onclick="showResume()">
+      <i class="fa fa-eye"></i> Have a look my Resume
     </button>
+
+    <div id="my_resume" class="w3-modal" style="display: none;">
+      <span class="w3-button w3-hover-red w3-large w3-display-topright" onclick="document.getElementById('my_resume').style.display='none'">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <img id="my_resume_img" src="images/my_cv.PNG" style="width:100%">
+      </div>
+    </div>
+
+  </div>
     
     
     <!-- Testimonials -->
@@ -168,6 +177,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- END PAGE CONTENT -->
 </div>
+
+  <script>
+    function showResume() {
+    document.getElementById("my_resume").style.display = "block";
+    }
+  </script>
 
 </body>
 </html>
