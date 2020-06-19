@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
@@ -55,7 +57,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <!-- Header/Home -->
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
     <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Rashed Rahat.</h1>
-    <p>Full-Stack Web Developer and Graphic Designer.</p>
+    <p>Professional Full-Stack Web Developer</p>
     <img src="images/rashedrahat.png" alt="Rashed Rahat" class="w3-image" width="992" height="1108">
   </header>
 
@@ -63,45 +65,63 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
     <h2 class="w3-text-light-grey">About Me</h2>
     <hr style="width:200px" class="w3-opacity">
-    <p>Hi! My full name is Rashed Ahmed Rahat. Love to hear with the name Rashed or Rahat. I'm a professional full-stack web developer. Very much passionate about web developing. Besides, love graphic designing.</p>
+    <p>Hi! My full name is Rashed Ahmed Rahat. Love to hear with the name Rashed or Rahat. I'm a professional full-stack web developer. Very much passionate in the field of web design and web development. Currently working as a Jr. Software Engineer at one of the finest local software companies of Bangladesh named <a style="text-decoration: none;" href="https://www.workspaceit.com/" class="w3-hover-text-white">Worksapce Infotech Limited</a>. Last but not the least, I do outsourcing to live more better <i class='fas fa-glass-cheers' style="color: whitesmoke;"></i> <i class='fab fa-fly' style="color: whitesmoke;"></i></p>
     <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
-    <p class="w3-wide">Front-End</p>
+    <p class="w3-medium"><b class="w3-large">Front-End</b> (HTML, CSS, Bootstrap, JavaScript & React)</p>
     <div class="w3-white">
       <div class="w3-dark-grey" style="height:28px;width:80%"></div>
     </div>
-    <p class="w3-wide">Back-End</p>
+    <p class="w3-medium"><b class="w3-large">Back-End</b> (Node.js+Express.js, PHP+Laravel, Python+Django & MySQL/MongoDB)</p>
     <div class="w3-white">
       <div class="w3-dark-grey" style="height:28px;width:70%"></div>
     </div>
-    <p class="w3-wide">Graphic Design</p>
+    <p class="w3-medium"><b class="w3-large">Graphic Design</b> (Business card, flyer, brochure & logo design) <span class="w3-animate-fading">Hidden Skill</span></p>
     <div class="w3-white">
       <div class="w3-dark-grey" style="height:28px;width:66%"></div>
     </div><br>
     
     <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
       <div class="w3-half w3-section">
-        <span class="w3-xlarge">16+</span><br>
+        <span class="w3-xlarge">17+</span><br>
         Projects Done
       </div>
       <div class="w3-half w3-section">
-        <span class="w3-xlarge">2+</span><br>
+        <span class="w3-xlarge">3+</span><br>
         Happy Clients
       </div>
     </div>
 
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download"></i> Download Resume
+    <button class="w3-button w3-light-grey w3-padding-large w3-section" onclick="showResume()">
+      <i class="fa fa-eye"></i> Have a look my Resume
     </button>
+
+    <div id="my_resume" class="w3-modal" style="display: none;">
+      <span class="w3-button w3-hover-red w3-large w3-display-topright" onclick="document.getElementById('my_resume').style.display='none'">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <img id="my_resume_img" src="images/my_cv.PNG" style="width:100%">
+      </div>
+    </div>
+
+    <div class="w3-content">
+      <span class="w3-large">To know more about me, explore:</span>
+      <a href="https://github.com/rashedrahat" target="_blank"><i class="fab fa-github w3-hover-opacity" style="font-size: 32px;"></i></a>
+      <a href="https://stackoverflow.com/users/story/10427807?view=Timeline" target="_blank"><i class="fab fa-stack-overflow w3-hover-opacity" style="font-size: 32px;"></i></a>
+      <a href="https://www.linkedin.com/in/rashedrahat" target="_blank"><i class="fab fa-linkedin w3-hover-opacity" style="font-size: 32px;"></i></a>
+      <a href="https://facebook.com/imrashedrahat" target="_blank"><i class="fab fa-facebook w3-hover-opacity" style="font-size: 32px;"></i></a>
+    </div>
+
+  </div>
     
     
     <!-- Testimonials -->
+  <div class="w3-padding-16 w3-content">
     <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
     <img src="images/shuvo.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">Shuvo Mehedi Hasan.</span> PHP Developer at Company.</p>
+    <p><span class="w3-large w3-margin-right">Shuvo Mehedi Hasan.</span> Laravel Developer at Ngenit Ltd.</p>
     <p>Rashed Rahat, the great guy with talent.</p><br>
     
     <img src="images/jitu.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">Nashid Kamal Jitu.</span> Java Developer at Company.</p>
+    <p><span class="w3-large w3-margin-right">Nashid Kamal Jitu.</span> Junior Software Engineer at Bit Mascot.</p>
     <p>One of the best full-stack developers is Rashed Rahat I've ever seen in my life. Awesome experience to work with him.</p>
   <!-- End About Section -->
   </div>
@@ -114,16 +134,37 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <!-- Grid for projects -->
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-half">
-        <img src="images/x_warehouse.png" style="width:100%">
-        <img src="images/gadto_ui.png" style="width:100%">
-        <img src="images/friend's.png" style="width:100%">
-        <img src="images/cholo_ure_berai.png" style="width:100%">
+        <b>Developed using: <i class='fab fa-react' title="React.js" style="font-size: 21px;"></i> <i class='fab fa-node' title="Node.js" style="font-size: 21px;"></i> <i class='fa fa-database' style="font-size: 21px;" title="MongoDB"></i></b><br/>
+        <b class="w3-text-grey"><a href="http://kyb-tuidentidad-dev.s3-website-us-east-1.amazonaws.com/" target="_blank" style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i></a></b>
+        <img src="images/tuidentidad.PNG" style="width:100%" class="w3-border w3-round">
+
+        
+        <b>Developed using: <i class='fab fa-html5' title="HTML5" style="font-size: 21px;"></i> <i class='fab fa-css3' title="CSS3" style="font-size: 21px;"></i> <i class="fab fa-bootstrap" title="Bootstrap 4" style="font-size: 21px;"></i> <i class='fab fa-js-square' title="JS" style="font-size: 21px;"></i> <i class='fab fa-laravel' title="Laravel" style="font-size: 21px;"></i> <i class='fab fa-node' title="Node.js" style="font-size: 21px;"></i> <i class='fa fa-database' style="font-size: 21px;" title="MySQL & MongoDB"></i></b><br/>
+        <b class="w3-text-grey"><a href="http://58.84.34.65/whatsappfrontend-wassi/" target="_blank" style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i> Client panel <i class='fas fa-user-tie'></i></a></b> & <b class="w3-text-grey"><a href="http://58.84.34.65/whatsappfrontend-wassi/admin" target="_blank" style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i> Admin panel <i class='fas fa-user-secret'></i></a></b>
+        <img src="images/wassi.PNG" style="width:100%" class="w3-border w3-border w3-round">
+
+        <b>Developed using: <i class='fab fa-html5' title="HTML5" style="font-size: 21px;"></i> <i class='fab fa-css3' title="CSS3" style="font-size: 21px;"></i> <i class="fab fa-bootstrap" title="Bootstrap 4" style="font-size: 21px;"></i> <i class='fab fa-node' title="Node.js" style="font-size: 21px;"></i> <i class='fa fa-database' style="font-size: 21px;" title="MySQL & MongoDB"></i></b><br/>
+        <b class="w3-text-grey"><a href="http://54.92.141.233:4515/" target="_blank" style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i></a></b>
+        <img src="images/hubex.PNG" style="width:100%" class="w3-border w3-border w3-round">
+
+        <b>Developed using: <i class='fab fa-html5' title="HTML5" style="font-size: 21px;"></i> <i class='fab fa-css3' title="CSS3" style="font-size: 21px;"></i> <i class="fab fa-bootstrap" title="Bootstrap 4" style="font-size: 21px;"></i> <i class='fab fa-js-square' title="JS" style="font-size: 21px;"></i> <i class='fab fa-laravel' title="Laravel" style="font-size: 21px;"></i> <i class='fa fa-database' style="font-size: 21px;" title="MySQL"></i></b><br/>
+        <b class="w3-text-grey"><a href="http://xwarehouse.herokuapp.com/" target="_blank" style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i></a></b>
+        <img src="images/x_warehouse.png" style="width:100%" class="w3-border w3-border w3-round">
+
+        <b>Developed using: <i class='fab fa-html5' title="HTML5" style="font-size: 21px;"></i> <i class='fab fa-css3' title="CSS3" style="font-size: 21px;"></i> <i class="fab fa-bootstrap" title="Bootstrap 4" style="font-size: 21px;"></i> <i class='fab fa-js-square' title="JS" style="font-size: 21px;"></i> <i class='fab fa-python' title="Django" style="font-size: 21px;"></i> <i class="fas fa-spider" style="font-size: 21px;" title="Scrapy"></i> <i class='fa fa-database' style="font-size: 21px;" title="MySQL"></i></b><br/>
+          <b class="w3-text-grey"><a href="https://github.com/rashedrahat/gadto-sp2" target="_blank" style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i></a></b>
+        <img src="images/gadto_ui.png" style="width:100%" class="w3-border w3-border w3-round">
+
+        <b>Developed using: <i class='fab fa-html5' title="HTML5" style="font-size: 21px;"></i> <i class='fab fa-css3' title="CSS3" style="font-size: 21px;"></i> <i class="fab fa-bootstrap" title="Bootstrap 4" style="font-size: 21px;"></i></b><br/>
+        <b class="w3-text-grey"><a href="https://rashedrahat.github.io/gadtoUI/" target="_blank" style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i></a></b>
+        <img src="images/gadto.PNG" style="width:100%" class="w3-border w3-border w3-round">
       </div>
 
       <div class="w3-half">
-        <img src="images/plainfield_sid.png" style="width:100%">
-        <img src="images/happy_clappy.jpg" style="width:100%">
-        <img src="images/real_heal.png" style="width:100%">
+        <img src="images/burfe.png" style="width:100%" class="w3-border w3-border w3-round">
+        <!-- <img src="images/plainfield_sid.png" style="width:100%"> -->
+        <img src="images/happy_clappy.jpg" style="width:100%" class="w3-border w3-border w3-round">
+        <img src="images/real_heal.png" style="width:100%" class="w3-border w3-border w3-round">
       </div>
     <!-- End project grid -->
     </div>
@@ -138,10 +179,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <div class="w3-section">
       <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Nikunja-2, Dhaka, Bangladesh</p>
       <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> +880 1633179767</p>
-      <p><i class="fa fa-skype fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> rashedrahat_2</p>
+      <p><i class="fab fa-skype fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> imrashedrahat</p>
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> rashedrahat@outlook.com</p>
-    </div><br>
-    <p>Lets get in touch. Send me a message:</p>
+    </div>
+    <!-- <p>Lets get in touch. Send me a message:</p>
+>>>>>>> f6bf92b03f91074810144db4c9c6c560f701c529
 
     <form action="" target="_blank">
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
@@ -153,21 +195,28 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
-    </form>
+    </form> -->
   <!-- End Contact Section -->
   </div>
   
     <!-- Footer -->
   <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <a href="https://facebook.com/imrashedrahat" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <a href="https://github.com/rashedrahat" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
-    <a href"https://www.linkedin.com/in/rashedrahat/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <a href="https://stackoverflow.com/users/story/10427807?view=Timeline" target="_blank"><i class="fab fa-stack-overflow w3-hover-opacity"></i></a>
+    <a href="https://github.com/rashedrahat" target="_blank"><i class="fab fa-github w3-hover-opacity"></i></a>
+    <a href="https://facebook.com/imrashedrahat" target="_blank"><i class="fab fa-facebook w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/rashedrahat/" target="_blank"><i class="fab fa-linkedin w3-hover-opacity"></i></a>
     <p class="w3-medium">Developed by <a href="#" class="w3-hover-text-white">Rashed Rahat</a></p>
   <!-- End footer -->
   </footer>
 
 <!-- END PAGE CONTENT -->
 </div>
+
+  <script>
+    function showResume() {
+    document.getElementById("my_resume").style.display = "block";
+    }
+  </script>
 
 </body>
 </html>
