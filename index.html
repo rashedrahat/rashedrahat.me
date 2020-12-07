@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <style>
     body, h1, h2, h3, h4, h5, h6 {
@@ -108,10 +109,11 @@
             working as a Jr. Software Engineer at one of the finest local software companies of Bangladesh named <b><a
                     style="text-decoration: none;" href="https://www.workspaceit.com/" class="w3-hover-text-white"
                     target="_blank">Worksapce
-                Infotech Limited</a></b>. Besides, working at a startup software company named <b><a
+                Infotech Limited since</a></b> June, 2019. Besides, worked at a startup software company named <b><a
                     style="text-decoration: none;" href="http://doorsoft.xyz/" class="w3-hover-text-white"
                     target="_blank">Door
-                Soft</a></b> as a Full-Stack Web Developer (part-time). Last but not the least, I do outsourcing to live
+                Soft</a></b> as a Full-Stack Web Developer (Contractual). Last but not the least, I do outsourcing to
+            live
             more better <i
                     class='fas fa-glass-cheers' style="color: whitesmoke;"></i> <i class='fab fa-fly'
                                                                                    style="color: whitesmoke;"></i></p>
@@ -120,40 +122,28 @@
         <div class="w3-white">
             <div class="w3-dark-grey" style="height:28px;width:70%"></div>
         </div>
-        <p class="w3-medium"><b class="w3-large">Back-End</b> (Node.js+Express.js, PHP+Laravel, Python+Django &
+        <p class="w3-medium"><b class="w3-large">Back-End</b> (Node.js+Express.js, PHP+Laravel, Python &
             MySQL/MongoDB)</p>
         <div class="w3-white">
             <div class="w3-dark-grey" style="height:28px;width:80%"></div>
-        </div>
-        <p class="w3-medium"><b class="w3-large">Graphic Design</b> (Business card, flyer, brochure & logo design) <span
-                class="w3-animate-fading">Hidden Skill</span></p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:66%"></div>
         </div>
         <br>
 
         <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
             <div class="w3-half w3-section">
-                <span class="w3-xlarge">20+</span><br>
+                <span class="w3-xlarge">22+</span><br>
                 Projects Done
             </div>
             <div class="w3-half w3-section">
-                <span class="w3-xlarge">4+</span><br>
+                <span class="w3-xlarge">5+</span><br>
                 Happy Clients
             </div>
         </div>
 
-        <button class="w3-button w3-light-grey w3-padding-large w3-section" onclick="showResume()">
-            <i class="fa fa-eye"></i> Have a look my Resume
+        <button class="w3-button w3-light-grey w3-padding-large w3-section"
+                onclick="downloadCV('https://github.com/rashedrahat/rashedrahat.me/tree/gh-pages/CV/FullStackDeveloper.pdf')">
+            <i class="fa fa-eye"></i> Have a look my CV
         </button>
-
-        <div id="my_resume" class="w3-modal" style="display: none;">
-            <span class="w3-button w3-hover-red w3-large w3-display-topright"
-                  onclick="document.getElementById('my_resume').style.display='none'">&times;</span>
-            <div class="w3-modal-content w3-animate-zoom">
-                <img id="my_resume_img" src="images/my-resume.png" style="width:100%">
-            </div>
-        </div>
 
         <div class="w3-content">
             <span class="w3-large">To know more about me, explore:</span>
@@ -186,107 +176,186 @@
 
     <!-- Portfolio Section -->
     <div class="w3-padding-64 w3-content" id="projects">
-        <h2 class="w3-text-light-grey">My Projects</h2>
-        <hr style="width:200px" class="w3-opacity">
+        <h2 class="w3-text-light-grey">My Projects
+            <button class="w3-button w3-sand w3-round-xxlarge"
+                    title="Click to see Laravel projects" onclick="showProjectsByWebTech('laravel')" id="laravel">
+                Laravel
+            </button>
+            <button class="w3-button w3-grey w3-round-xxlarge" title="Click to see Node.js projects"
+                    onclick="showProjectsByWebTech('nodejs')" id="nodejs">Node.js
+            </button>
+            <button class="w3-button w3-grey w3-round-xxlarge" title="Click to see React.js projects"
+                    onclick="showProjectsByWebTech('reactjs')" id="reactjs">React.js
+            </button>
+            <button class="w3-button w3-grey w3-round-xxlarge" title="Click to see UI Design projects"
+                    onclick="showProjectsByWebTech('ui')" id="ui">UI Design
+            </button>
+        </h2>
+        <hr style="width:100%" class="w3-opacity">
 
         <!-- Grid for projects -->
-        <div class="w3-row-padding" style="margin:0 -16px">
-            <div class="w3-half">
-                <b>Developed using: <i class='fab fa-react' title="React.js" style="font-size: 21px;"></i> <img
-                        src="https://cdn.freebiesupply.com/logos/large/2x/redux-logo-black-and-white.png"
-                        style="width: 21px; height: 21px" title="Redux"><i class='fab fa-node' title="Node.js"
-                                                                           style="font-size: 21px;"></i> <i
-                        class='fa fa-database' style="font-size: 21px;" title="MongoDB"></i></b><br/>
-                <b class="w3-text-grey"><a href="http://kyb-tuidentidad-dev.s3-website-us-east-1.amazonaws.com/"
-                                           target="_blank" style="text-decoration: none;">Jump to see <i
-                        class='fas fa-eye'></i></a></b>
-                <img src="images/tuidentidad.PNG" style="width:100%" class="w3-border w3-round">
+        <div class="w3-container w3-center w3-animate-zoom" id="laravel-projects">
+            <div class="w3-row-padding">
+                <div>
+                    <b class="w3-text-grey"><a href="http://58.84.34.65/whatsappfrontend-wassi/" target="_blank"
+                                               style="text-decoration: none;"
+                                               title="Login with username: BBweb & password: 123456">Jump to see <i
+                            class='fas fa-eye'></i> Client
+                        panel <i class='fas fa-user-tie'></i></a></b>&emsp;&&emsp;<b class="w3-text-grey"><a
+                        href="http://58.84.34.65/whatsappfrontend-wassi/admin" target="_blank"
+                        style="text-decoration: none;" title="Login with username: admin & password: 123456">Jump to see
+                    <i class='fas fa-eye'></i> Admin panel <i
+                            class='fas fa-user-secret'></i></a></b>
+                </div>
+                <div>
+                    <p class="w3-tooltip">Hover here to see credentials<span class="w3-text w3-tag"><b>Client</b> (Username: BBweb & Password: 123456) & <b>Admin</b> (Username: admin & Password: 123456).</span>
+                    </p>
+                </div>
+                <div>
+                    <img src="images/wassi.PNG" alt="Wassi" style="width:100%">
+                    <b>Developed using: <i class='fab fa-html5' title="HTML5" style="font-size: 21px;"></i> <i
+                            class='fab fa-css3' title="CSS3" style="font-size: 21px;"></i> <i class="fab fa-bootstrap"
+                                                                                              title="Bootstrap 4"
+                                                                                              style="font-size: 21px;"></i>
+                        <i class='fab fa-js-square' title="JS" style="font-size: 21px;"></i> <i class='fab fa-laravel'
+                                                                                                title="Laravel"
+                                                                                                style="font-size: 21px;"></i>
+                        <i class='fab fa-node' title="Node.js" style="font-size: 21px;"></i> <i class='fa fa-database'
+                                                                                                style="font-size: 21px;"
+                                                                                                title="MySQL & MongoDB"></i></b><br/>
+                </div>
+            </div>
+            <br>
+            <div class="w3-row-padding">
+                <div style="margin: 10px 0px 0px 0px">
+                    <b class="w3-text-grey"><a href="https://askmepos.net/restaurant/login" target="_blank"
+                                               style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i></a></b>
+                </div>
+                <div>
+                    <p class="w3-tooltip">Hover here to see credentials<span class="w3-text w3-tag"><b>ID: 0001, Email: nyzaw@mailinator.com & Password: 123456</b>.</span>
+                    </p>
+                </div>
+                <div>
+                    <img src="images/ask-me-pos.png" alt="AskMePOS" style="width:100%">
+                    <b>Developed using: <i class='fab fa-html5' title="HTML5" style="font-size: 21px;"></i> <i
+                            class='fab fa-css3' title="CSS3" style="font-size: 21px;"></i> <i class="fab fa-bootstrap"
+                                                                                              title="Bootstrap 4"
+                                                                                              style="font-size: 21px;"></i>
+                        <i class='fab fa-js-square' title="JS" style="font-size: 21px;"></i> <i class='fab fa-laravel'
+                                                                                                title="Laravel"
+                                                                                                style="font-size: 21px;"></i>
+                        <i class='fa fa-database'
+                           style="font-size: 21px;"
+                           title="MySQL"></i></b><br/>
+                </div>
+            </div>
+            <br>
+            <div class="w3-row-padding">
+                <div style="margin: 10px 0px 0px 0px">
+                    <b class="w3-text-grey"><a href="http://bdsat.co/" target="_blank"
+                                               style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i></a></b>
+                </div>
+                <div style="margin: 15px 0px 0px 0px">
+                    <img src="images/bdSat.png" alt="bdSat" style="width:100%">
+                    <b>Developed using: <i class='fab fa-html5' title="HTML5" style="font-size: 21px;"></i> <i
+                            class='fab fa-css3' title="CSS3" style="font-size: 21px;"></i> <i class="fab fa-bootstrap"
+                                                                                              title="Bootstrap 4"
+                                                                                              style="font-size: 21px;"></i>
+                        <i class='fab fa-js-square' title="JS" style="font-size: 21px;"></i> <i class='fab fa-laravel'
+                                                                                                title="Laravel"
+                                                                                                style="font-size: 21px;"></i>
+                        <i class='fa fa-database'
+                           style="font-size: 21px;"
+                           title="MySQL"></i></b><br/>
+                </div>
+            </div>
+        </div>
 
+        <div class="w3-container w3-center w3-animate-zoom" id="nodejs-projects" style="display: none;">
+            <div class="w3-row-padding">
+                <div>
+                    <b class="w3-text-grey"><a href="http://54.92.141.233:4515/" target="_blank"
+                                               style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i></a></b>
+                    <div>
+                        <p class="w3-tooltip">Hover here to see credentials<span class="w3-text w3-tag"><b>Email: info@hubex.tech & Password: admin</b>.</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/hubex.PNG" alt="Wassi" style="width:100%">
+                    <b>Developed using: <i class='fab fa-html5' title="HTML5" style="font-size: 21px;"></i> <i
+                            class='fab fa-css3' title="CSS3" style="font-size: 21px;"></i> <i class="fab fa-bootstrap"
+                                                                                              title="Bootstrap 4"
+                                                                                              style="font-size: 21px;"></i>
+                        <i class='fab fa-node' title="Node.js" style="font-size: 21px;"></i> <i class='fa fa-database'
+                                                                                                style="font-size: 21px;"
+                                                                                                title="MySQL & MongoDB"></i></b><br/>
+                </div>
+            </div>
+            <br>
+        </div>
 
-                <b>Developed using: <i class='fab fa-html5' title="HTML5" style="font-size: 21px;"></i> <i
-                        class='fab fa-css3' title="CSS3" style="font-size: 21px;"></i> <i class="fab fa-bootstrap"
-                                                                                          title="Bootstrap 4"
-                                                                                          style="font-size: 21px;"></i>
-                    <i class='fab fa-js-square' title="JS" style="font-size: 21px;"></i> <i class='fab fa-laravel'
-                                                                                            title="Laravel"
-                                                                                            style="font-size: 21px;"></i>
-                    <i class='fab fa-node' title="Node.js" style="font-size: 21px;"></i> <i class='fa fa-database'
-                                                                                            style="font-size: 21px;"
-                                                                                            title="MySQL & MongoDB"></i></b><br/>
-                <b class="w3-text-grey"><a href="http://58.84.34.65/whatsappfrontend-wassi/" target="_blank"
-                                           style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i> Client
-                    panel <i class='fas fa-user-tie'></i></a></b> & <b class="w3-text-grey"><a
-                    href="http://58.84.34.65/whatsappfrontend-wassi/admin" target="_blank"
-                    style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i> Admin panel <i
-                    class='fas fa-user-secret'></i></a></b>
-                <img src="images/wassi.PNG" style="width:100%" class="w3-border w3-border w3-round">
+        <div class="w3-container w3-center w3-animate-zoom" id="reactjs-projects" style="display: none;">
+            <div class="w3-row-padding">
+                <div style="margin: 0px 0px 10px 0px">
+                    <b class="w3-text-grey"><a href="http://sutraq-web.s3-website-us-east-1.amazonaws.com"
+                                               target="_blank"
+                                               style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i></a></b>
+                </div>
+                <div>
+                    <img src="images/sutraq.png" alt="TuIdentidad" style="width:100%">
+                    <b>Developed using: <i class='fab fa-react' title="React.js" style="font-size: 21px;"></i> <img
+                            src="https://cdn.freebiesupply.com/logos/large/2x/redux-logo-black-and-white.png"
+                            style="width: 21px; height: 21px" title="Redux"> <i class='fab fa-node' title="Node.js"
+                                                                                style="font-size: 21px;"></i> <i
+                            class='fa fa-database' style="font-size: 21px;" title="MongoDB"></i></b><br/>
+                </div>
+            </div>
+            <br>
+            <div class="w3-row-padding">
+                <div>
+                    <b class="w3-text-grey"><a href="http://kyb-tuidentidad-dev.s3-website-us-east-1.amazonaws.com/"
+                                               target="_blank"
+                                               style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i></a></b>
+                </div>
+                <div>
+                    <img src="images/tuidentidad.PNG" alt="TuIdentidad" style="width:100%">
+                    <b>Developed using: <i class='fab fa-react' title="React.js" style="font-size: 21px;"></i> <img
+                            src="https://cdn.freebiesupply.com/logos/large/2x/redux-logo-black-and-white.png"
+                            style="width: 21px; height: 21px" title="Redux"> <i class='fab fa-node' title="Node.js"
+                                                                                style="font-size: 21px;"></i> <i
+                            class='fa fa-database' style="font-size: 21px;" title="MongoDB"></i></b><br/>
+                </div>
+            </div>
+            <br>
+        </div>
 
-                <b>Developed using: <i class='fab fa-html5' title="HTML5" style="font-size: 21px;"></i> <i
-                        class='fab fa-css3' title="CSS3" style="font-size: 21px;"></i> <i class="fab fa-bootstrap"
-                                                                                          title="Bootstrap 4"
-                                                                                          style="font-size: 21px;"></i>
-                    <i class='fab fa-node' title="Node.js" style="font-size: 21px;"></i> <i class='fa fa-database'
-                                                                                            style="font-size: 21px;"
-                                                                                            title="MySQL & MongoDB"></i></b><br/>
-                <b class="w3-text-grey"><a href="http://54.92.141.233:4515/" target="_blank"
-                                           style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i></a></b>
-                <img src="images/hubex.PNG" style="width:100%" class="w3-border w3-border w3-round">
-
-                <b>Developed using: <i class='fab fa-html5' title="HTML5" style="font-size: 21px;"></i> <i
-                        class='fab fa-css3' title="CSS3" style="font-size: 21px;"></i> <i class="fab fa-bootstrap"
-                                                                                          title="Bootstrap 4"
-                                                                                          style="font-size: 21px;"></i>
-                    <i class='fab fa-js-square' title="JS" style="font-size: 21px;"></i> <i class='fab fa-laravel'
-                                                                                            title="Laravel"
-                                                                                            style="font-size: 21px;"></i>
-                    <i class='fa fa-database' style="font-size: 21px;" title="MySQL"></i></b><br/>
-                <b class="w3-text-grey"><a href="http://xwarehouse.herokuapp.com/" target="_blank"
-                                           style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i></a></b>
-                <img src="images/x_warehouse.png" style="width:100%" class="w3-border w3-border w3-round">
-
-                <b>Developed using: <i class='fab fa-html5' title="HTML5" style="font-size: 21px;"></i> <i
-                        class='fab fa-css3' title="CSS3" style="font-size: 21px;"></i> <i class="fab fa-bootstrap"
-                                                                                          title="Bootstrap 4"
-                                                                                          style="font-size: 21px;"></i>
-                    <i class='fab fa-js-square' title="JS" style="font-size: 21px;"></i> <i class='fab fa-python'
-                                                                                            title="Django"
-                                                                                            style="font-size: 21px;"></i>
-                    <i class="fas fa-spider" style="font-size: 21px;" title="Scrapy"></i> <i class='fa fa-database'
-                                                                                             style="font-size: 21px;"
-                                                                                             title="MySQL"></i></b><br/>
-                <b class="w3-text-grey"><a href="https://github.com/rashedrahat/gadto-sp2" target="_blank"
-                                           style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i></a></b>
-                <img src="images/gadto_ui.png" style="width:100%" class="w3-border w3-border w3-round">
-
+        <div class="w3-container w3-center w3-animate-zoom" id="ui-projects" style="display: none;">
+            <div class="w3-row-padding">
+                <div style="margin: 0px 0px 10px 0px">
+                    <b class="w3-text-grey"><a href="https://rashedrahat.github.io/gadtoUI/" target="_blank"
+                                               style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i></a></b>
+                </div>
+                <div class="w3-half">
+                    <img src="images/gadto.PNG" alt="TuIdentidad" style="width:100%">
+                </div>
+                <div class="w3-half">
+                    <img src="images/gadto_ui.png" alt="TuIdentidad" style="width:100%">
+                </div>
+            </div>
+            <div>
                 <b>Developed using: <i class='fab fa-html5' title="HTML5" style="font-size: 21px;"></i> <i
                         class='fab fa-css3' title="CSS3" style="font-size: 21px;"></i> <i class="fab fa-bootstrap"
                                                                                           title="Bootstrap 4"
                                                                                           style="font-size: 21px;"></i></b><br/>
-                <b class="w3-text-grey"><a href="https://rashedrahat.github.io/gadtoUI/" target="_blank"
-                                           style="text-decoration: none;">Jump to see <i class='fas fa-eye'></i></a></b>
-                <img src="images/gadto.PNG" style="width:100%" class="w3-border w3-border w3-round">
             </div>
-
-            <div class="w3-half">
-                <b>Designed using: <img
-                        src="https://image.freepik.com/free-icon/adobe-photoshop_318-1513.jpg"
-                        style="width: 21px; height: 21px" title="Adobe Photoshop"></b><br/>
-                <img src="images/burfe.png" style="width:100%" class="w3-border w3-border w3-round">
-                <!-- <img src="images/plainfield_sid.png" style="width:100%"> -->
-                <b>Designed using: <img
-                        src="https://image.freepik.com/free-icon/adobe-photoshop_318-1513.jpg"
-                        style="width: 21px; height: 21px" title="Adobe Photoshop"></b><br/>
-                <img src="images/happy_clappy.jpg" style="width:100%" class="w3-border w3-border w3-round">
-                <b>Designed using: <img
-                        src="https://image.freepik.com/free-icon/adobe-photoshop_318-1513.jpg"
-                        style="width: 21px; height: 21px" title="Adobe Photoshop"></b><br/>
-                <img src="images/real_heal.png" style="width:100%" class="w3-border w3-border w3-round">
-            </div>
-            <!-- End project grid -->
         </div>
-        <div class="w3-panel w3-light-grey">
+
+
+        <div class="w3-panel w3-light-grey w3-animate-fading">
             <span style="font-size:150px;line-height:0.6em;opacity:0.2">❝</span>
-            <p class="w3-xlarge" style="margin-top:-40px"><i>“The happiest moment i felt; is that moment when i realized my ability to create.”
+            <p class="w3-xlarge" style="margin-top:-40px"><i>“The happiest moment i felt; is that moment when i realized
+                my ability to create.”
                 ― Dr. Hazem Ali</i></p>
             <a href="https://github.com/rashedrahat?tab=repositories" target="_blank"
                style="text-decoration: none;"><span class="w3-tag w3-large">See all my projects <i
@@ -309,20 +378,6 @@
             <p><i class="fab fa-skype fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> imrashedrahat</p>
             <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> rashedrahat@outlook.com</p>
         </div>
-        <!-- <p>Lets get in touch. Send me a message:</p>
-    >>>>>>> f6bf92b03f91074810144db4c9c6c560f701c529
-
-        <form action="" target="_blank">
-          <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-          <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-          <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-          <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
-          <p>
-            <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-              <i class="fa fa-paper-plane"></i> SEND MESSAGE
-            </button>
-          </p>
-        </form> -->
         <!-- End Contact Section -->
     </div>
 
@@ -343,8 +398,60 @@
 </div>
 
 <script>
-    function showResume() {
-        document.getElementById("my_resume").style.display = "block";
+    function downloadCV(URL) {
+        window.open(URL, '_blank');
+    }
+
+    function showProjectsByWebTech(webTech) {
+        switch (webTech) {
+            case "nodejs":
+                $("#nodejs").removeClass("w3-grey").addClass("w3-sand")
+
+                $("#ui").removeClass("w3-sand").addClass("w3-grey")
+                $("#reactjs").removeClass("w3-sand").addClass("w3-grey")
+                $("#laravel").removeClass("w3-sand").addClass("w3-grey")
+
+                document.getElementById("nodejs-projects").style.display = "block";
+                document.getElementById("reactjs-projects").style.display = "none";
+                document.getElementById("ui-projects").style.display = "none";
+                document.getElementById("laravel-projects").style.display = "none";
+                break;
+            case "reactjs":
+                $("#reactjs").removeClass("w3-grey").addClass("w3-sand")
+
+                $("#ui").removeClass("w3-sand").addClass("w3-grey")
+                $("#nodejs").removeClass("w3-sand").addClass("w3-grey")
+                $("#laravel").removeClass("w3-sand").addClass("w3-grey")
+
+                document.getElementById("reactjs-projects").style.display = "block";
+                document.getElementById("nodejs-projects").style.display = "none";
+                document.getElementById("ui-projects").style.display = "none";
+                document.getElementById("laravel-projects").style.display = "none";
+                break;
+            case "ui":
+                $("#ui").removeClass("w3-grey").addClass("w3-sand")
+
+                $("#reactjs").removeClass("w3-sand").addClass("w3-grey")
+                $("#nodejs").removeClass("w3-sand").addClass("w3-grey")
+                $("#laravel").removeClass("w3-sand").addClass("w3-grey")
+
+                document.getElementById("ui-projects").style.display = "block";
+                document.getElementById("nodejs-projects").style.display = "none";
+                document.getElementById("reactjs-projects").style.display = "none";
+                document.getElementById("laravel-projects").style.display = "none";
+                break;
+            default:
+                $("#laravel").removeClass("w3-grey").addClass("w3-sand")
+
+                $("#reactjs").removeClass("w3-sand").addClass("w3-grey")
+                $("#nodejs").removeClass("w3-sand").addClass("w3-grey")
+                $("#ui").removeClass("w3-sand").addClass("w3-grey")
+
+                document.getElementById("laravel-projects").style.display = "block";
+                document.getElementById("nodejs-projects").style.display = "none";
+                document.getElementById("reactjs-projects").style.display = "none";
+                document.getElementById("ui-projects").style.display = "none";
+        }
     }
 </script>
 
