@@ -123,13 +123,13 @@
 
         <div class="w3-content">
             <span class="w3-large">To know more about me, explore:</span>
-            <a href="https://github.com/rashedrahat" target="_blank"><i class="fab fa-github w3-hover-opacity"
+            <a href="https://github.com/rashedrahat" target="_blank"><i class="fa-brands fa-github w3-hover-opacity"
                                                                         style="font-size: 32px;"></i></a>
             <a href="https://stackoverflow.com/users/story/10427807?view=Timeline" target="_blank"><i
-                    class="fab fa-stack-overflow w3-hover-opacity" style="font-size: 32px;"></i></a>
+                    class="fa-brands fa-stack-overflow w3-hover-opacity" style="font-size: 32px;"></i></a>
             <a href="https://www.linkedin.com/in/rashedrahat" target="_blank"><i
-                    class="fab fa-linkedin w3-hover-opacity" style="font-size: 32px;"></i></a>
-            <a href="https://facebook.com/imrashedrahat" target="_blank"><i class="fab fa-facebook w3-hover-opacity"
+                    class="fa-brands fa-linkedin w3-hover-opacity" style="font-size: 32px;"></i></a>
+            <a href="https://facebook.com/imrashedrahat" target="_blank"><i class="fa-brands fa-facebook w3-hover-opacity"
                                                                             style="font-size: 32px;"></i></a>
         </div>
 
@@ -145,7 +145,7 @@
         <p>Rashed Rahat, the great guy with talent.</p><br>
 
         <img src="images/jitu.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-        <p><span class="w3-large w3-margin-right">Nashid Kamal Jitu.</span> Junior Software Engineer at Bit Mascot.</p>
+        <p><span class="w3-large w3-margin-right">Nashid Kamal Jitu.</span> Software Engineer at Bit Mascot.</p>
         <p>One of the best full-stack web developers is Rashed Rahat I've ever seen in my life. Awesome experience to work
             with him.</p>
         <!-- End About Section -->
@@ -171,7 +171,7 @@
         <hr style="width:100%" class="w3-opacity">
 
         <!-- Grid for projects -->
-        <div class="w3-container w3-center w3-animate-zoom" id="laravel-projects">
+        <div class="w3-container w3-center w3-animate-zoom" id="laravel-projects" style="display: none;">
             <div class="w3-row-padding">
                 <div>
                     <b class="w3-text-grey"><a href="http://58.84.34.65/whatsappfrontend-wassi/" target="_blank"
@@ -345,7 +345,7 @@
             <br>
         </div>
 
-        <div class="w3-container w3-center w3-animate-zoom" id="ui-projects" style="display: none;">
+        <div class="w3-container w3-center w3-animate-zoom" id="ui-projects">
             <div class="w3-row-padding">
                 <div style="margin: 0px 0px 10px 0px">
                     <b class="w3-text-grey"><a href="https://rashedrahat.github.io/gadtoUI/" target="_blank"
@@ -390,7 +390,7 @@
             <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Nikunja-2, Dhaka,
                 Bangladesh</p>
             <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> +880 1633179767</p>
-            <p><i class="fab fa-skype fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> imrashedrahat</p>
+            <p><i class="fa-brands fa-skype fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> imrashedrahat</p>
             <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> rashedrahat@outlook.com</p>
         </div>
         <!-- End Contact Section -->
@@ -399,12 +399,12 @@
     <!-- Footer -->
     <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
         <a href="https://stackoverflow.com/users/story/10427807?view=Timeline" target="_blank"><i
-                class="fab fa-stack-overflow w3-hover-opacity"></i></a>
-        <a href="https://github.com/rashedrahat" target="_blank"><i class="fab fa-github w3-hover-opacity"></i></a>
+                class="fa-brands fa-stack-overflow w3-hover-opacity"></i></a>
+        <a href="https://github.com/rashedrahat" target="_blank"><i class="fa-brands fa-github w3-hover-opacity"></i></a>
         <a href="https://facebook.com/imrashedrahat" target="_blank"><i
-                class="fab fa-facebook w3-hover-opacity"></i></a>
+                class="fa-brands fa-facebook w3-hover-opacity"></i></a>
         <a href="https://www.linkedin.com/in/rashedrahat/" target="_blank"><i
-                class="fab fa-linkedin w3-hover-opacity"></i></a>
+                class="fa-brands fa-linkedin w3-hover-opacity"></i></a>
         <p class="w3-medium">Developed by <a href="#" class="w3-hover-text-white">Rashed Rahat</a></p>
         <!-- End footer -->
     </footer>
@@ -413,10 +413,6 @@
 </div>
 
 <script>
-    function downloadCV(URL) {
-        window.open(URL, '_blank');
-    }
-
     function showProjectsByWebTech(webTech) {
         switch (webTech) {
             case "nodejs":
@@ -443,7 +439,19 @@
                 document.getElementById("ui-projects").style.display = "none";
                 document.getElementById("laravel-projects").style.display = "none";
                 break;
-            case "ui":
+            case "laravel":
+                $("#laravel").removeClass("w3-grey").addClass("w3-sand")
+
+                $("#reactjs").removeClass("w3-sand").addClass("w3-grey")
+                $("#nodejs").removeClass("w3-sand").addClass("w3-grey")
+                $("#ui").removeClass("w3-sand").addClass("w3-grey")
+
+                document.getElementById("laravel-projects").style.display = "block";
+                document.getElementById("nodejs-projects").style.display = "none";
+                document.getElementById("reactjs-projects").style.display = "none";
+                document.getElementById("ui-projects").style.display = "none";
+
+            default:
                 $("#ui").removeClass("w3-grey").addClass("w3-sand")
 
                 $("#reactjs").removeClass("w3-sand").addClass("w3-grey")
@@ -455,17 +463,6 @@
                 document.getElementById("reactjs-projects").style.display = "none";
                 document.getElementById("laravel-projects").style.display = "none";
                 break;
-            default:
-                $("#laravel").removeClass("w3-grey").addClass("w3-sand")
-
-                $("#reactjs").removeClass("w3-sand").addClass("w3-grey")
-                $("#nodejs").removeClass("w3-sand").addClass("w3-grey")
-                $("#ui").removeClass("w3-sand").addClass("w3-grey")
-
-                document.getElementById("laravel-projects").style.display = "block";
-                document.getElementById("nodejs-projects").style.display = "none";
-                document.getElementById("reactjs-projects").style.display = "none";
-                document.getElementById("ui-projects").style.display = "none";
         }
     }
 </script>
