@@ -413,10 +413,6 @@
 </div>
 
 <script>
-    function downloadCV(URL) {
-        window.open(URL, '_blank');
-    }
-
     function showProjectsByWebTech(webTech) {
         switch (webTech) {
             case "nodejs":
@@ -443,7 +439,19 @@
                 document.getElementById("ui-projects").style.display = "none";
                 document.getElementById("laravel-projects").style.display = "none";
                 break;
-            case "ui":
+            case "laravel":
+                $("#laravel").removeClass("w3-grey").addClass("w3-sand")
+
+                $("#reactjs").removeClass("w3-sand").addClass("w3-grey")
+                $("#nodejs").removeClass("w3-sand").addClass("w3-grey")
+                $("#ui").removeClass("w3-sand").addClass("w3-grey")
+
+                document.getElementById("laravel-projects").style.display = "block";
+                document.getElementById("nodejs-projects").style.display = "none";
+                document.getElementById("reactjs-projects").style.display = "none";
+                document.getElementById("ui-projects").style.display = "none";
+
+            default:
                 $("#ui").removeClass("w3-grey").addClass("w3-sand")
 
                 $("#reactjs").removeClass("w3-sand").addClass("w3-grey")
@@ -455,17 +463,6 @@
                 document.getElementById("reactjs-projects").style.display = "none";
                 document.getElementById("laravel-projects").style.display = "none";
                 break;
-            default:
-                $("#laravel").removeClass("w3-grey").addClass("w3-sand")
-
-                $("#reactjs").removeClass("w3-sand").addClass("w3-grey")
-                $("#nodejs").removeClass("w3-sand").addClass("w3-grey")
-                $("#ui").removeClass("w3-sand").addClass("w3-grey")
-
-                document.getElementById("laravel-projects").style.display = "block";
-                document.getElementById("nodejs-projects").style.display = "none";
-                document.getElementById("reactjs-projects").style.display = "none";
-                document.getElementById("ui-projects").style.display = "none";
         }
     }
 </script>
